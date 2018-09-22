@@ -24,7 +24,7 @@ public class SignInPage extends BaseTestScript {
 	 */
 
 	/* Labels */
-	@FindBy(xpath = "//form//label")
+	@FindBy(xpath = "//*[@id=\"authportal-main-section\"]//form//label")
 	@CacheLookup
 	public WebElement lblEmailOrMobilePhoneNumber;
 

@@ -29,7 +29,7 @@ public class AddToCartPage extends BaseTestScript {
 	public WebElement ConfirmationMessage;
 
 	/* DropDowns */
-	@FindBy(id = "nav-link-shopall")
+	@FindBy(id = "quantity")
 	@CacheLookup
 	public WebElement ddQuantity;
 
@@ -38,9 +38,10 @@ public class AddToCartPage extends BaseTestScript {
 	@CacheLookup
 	public WebElement btnAddToCart;
 
-	@FindBy(xpath = "//*[@id=\"a-popover-6\"]/div/header/button")
+	@FindBy(xpath="//*[@class=\"a-popover-wrapper\"]/header/button")
 	@CacheLookup
-	public WebElement btnCloseAddToYourOrder;
+	public WebElement btnCloseAddToYourOrderPopUp;
+	
 
 	@FindBy(xpath = "//*[@id=\"hlb-next-steps\"]/a[2]")
 	@CacheLookup

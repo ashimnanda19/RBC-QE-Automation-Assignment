@@ -45,11 +45,11 @@ public class NavBarAmazonHomePage extends BaseTestScript {
 	 * 
 	 */
 
-	@FindBy(linkText = "Kindle")
+	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[8]//a[1]/span[1]")
 	@CacheLookup
 	public WebElement linkKindleOptions_Kindle;
 
-	@FindBy(linkText = "Kindle Paperwhite")
+	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[8]//a[2]/span[1]")
 	@CacheLookup
 	public WebElement linkKindleOptions_KindlePaperWhite;
 
