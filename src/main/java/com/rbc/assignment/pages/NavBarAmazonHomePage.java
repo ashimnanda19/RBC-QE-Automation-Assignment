@@ -8,52 +8,50 @@ import org.openqa.selenium.support.FindBy;
 
 public class NavBarAmazonHomePage {
 	WebDriver driver;
-	
+
 	public NavBarAmazonHomePage(WebDriver driver) {
-		this.driver= driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	 /**
 
-     * WebElements on the HomePage
-     * Please note that all the webelements are not listed.
-     */
-	
-	@FindBy(id="nav-link-shopall")
-	@CacheLookup
-	WebElement shopByDepartment;
-	
-	 /**
+	/*
+	 * public static NavBarAmazonHomePage get(WebDriver driver) { this.driver =
+	 * driver; PageFactory.initElements(driver, this); }
+	 */
 
-     * WebElements of Shop By Department On-hover Dropdown Main Menu 
-     * 
-     */
-	
-	@FindBy(xpath="//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[1]/span")
-	@CacheLookup	
-	WebElement dropDownDepartmentAmazonPrime;
-	
-	@FindBy(xpath="//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[2]/span")
+	/**
+	 * 
+	 * WebElements on the HomePage. Please note that all the WebElements have not
+	 * been created here.
+	 * 
+	 */
+
+	@FindBy(id = "nav-link-shopall")
 	@CacheLookup
-	WebElement dropDownDepartmentAmazonPrimeVideo;
-	
-	
-	@FindBy(xpath="//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[3]/span[1]")
+	WebElement btnNavbarShopByDepartment;
+
+	/**
+	 * 
+	 * WebElements of Shop By Department On-hover Dropdown Main Menu
+	 * 
+	 */
+
+	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[8]/span")
 	@CacheLookup
-	WebElement dropDownDepartment;
-	
-	@FindBy(xpath="//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[8]/span")
+	WebElement departmentKindle;
+
+	/**
+	 * 
+	 * WebElements representing options in the menu of Kindle department
+	 * 
+	 */
+
+	@FindBy(linkText = "Kindle")
 	@CacheLookup
-	WebElement dropDownDepartmentKindle;
-	
-	
-	
-	@FindBy(xpath="//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[8]/span")
+	WebElement linkKindleOptions_Kindle;
+
+	@FindBy(linkText = "Kindle Paperwhite")
 	@CacheLookup
-	WebElement dropDownMainMenuKindle;
-	
-	
-	
-	
+	WebElement linkKindleOptions_KindlePaperWhite;
+
 }
