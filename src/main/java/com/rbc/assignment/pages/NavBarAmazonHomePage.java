@@ -3,21 +3,20 @@ package com.rbc.assignment.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import com.rbc.assignment.utility.framework.BaseTestScript;
+
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
-public class NavBarAmazonHomePage {
-	WebDriver driver;
+public class NavBarAmazonHomePage extends BaseTestScript {
+	private static NavBarAmazonHomePage testObj;
+	WebDriver driver = getDriver();
 
-	public NavBarAmazonHomePage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+	public synchronized static NavBarAmazonHomePage get() {
+		testObj = PageFactory.initElements(getDriver(), NavBarAmazonHomePage.class);
+		return testObj;
 	}
-
-	/*
-	 * public static NavBarAmazonHomePage get(WebDriver driver) { this.driver =
-	 * driver; PageFactory.initElements(driver, this); }
-	 */
 
 	/**
 	 * 
@@ -28,7 +27,7 @@ public class NavBarAmazonHomePage {
 
 	@FindBy(id = "nav-link-shopall")
 	@CacheLookup
-	WebElement btnNavbarShopByDepartment;
+	public WebElement btnNavbarShopByDepartment;
 
 	/**
 	 * 
@@ -38,7 +37,7 @@ public class NavBarAmazonHomePage {
 
 	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[8]/span")
 	@CacheLookup
-	WebElement departmentKindle;
+	public WebElement departmentKindle;
 
 	/**
 	 * 
@@ -48,10 +47,10 @@ public class NavBarAmazonHomePage {
 
 	@FindBy(linkText = "Kindle")
 	@CacheLookup
-	WebElement linkKindleOptions_Kindle;
+	public WebElement linkKindleOptions_Kindle;
 
 	@FindBy(linkText = "Kindle Paperwhite")
 	@CacheLookup
-	WebElement linkKindleOptions_KindlePaperWhite;
+	public WebElement linkKindleOptions_KindlePaperWhite;
 
 }
