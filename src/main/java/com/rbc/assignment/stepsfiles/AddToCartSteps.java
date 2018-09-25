@@ -6,6 +6,13 @@ import com.rbc.assignment.pages.AddToCartPage;
 import com.rbc.assignment.utility.framework.BaseTestScript;
 import com.rbc.assignment.utility.framework.Log;
 
+/***
+ * This is steps class for AddToCartPage, This class contains generic methods of
+ * operation on AddToCartPage .
+ * 
+ * @author ashimnanda19
+ *
+ */
 public class AddToCartSteps extends BaseTestScript {
 
 	WebDriver driver = getDriver();
@@ -15,6 +22,11 @@ public class AddToCartSteps extends BaseTestScript {
 		return testObj;
 	}
 
+	/***
+	 * This method select given value from the quantity dropdown.
+	 * 
+	 * @param qty
+	 */
 	public void selectQuantity(String qty) {
 		seWaitForClickableWebElement(driver, AddToCartPage.get().ddQuantity, 20);
 		seSelectDropdownByValue(AddToCartPage.get().ddQuantity, "ddQuantity", qty);
@@ -32,6 +44,12 @@ public class AddToCartSteps extends BaseTestScript {
 		seClickOnElement(AddToCartPage.get().btnAddToYourOrderPopUp, "btnAddToYourOrderPopUp");
 	}
 
+	/***
+	 * This method confirms the addition of product in to cart and returns true if
+	 * the products are succesfully added to the cart.
+	 * 
+	 * @return
+	 */
 	public boolean confirmProductAddedToCart() {
 		try {
 			String ActualMessage = AddToCartPage.get().confirmationMessage.getText();
