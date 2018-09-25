@@ -10,6 +10,12 @@ import com.rbc.assignment.pages.NavBarAmazonHomePage;
 import com.rbc.assignment.utility.framework.BaseTestScript;
 import com.rbc.assignment.utility.framework.Log;
 
+/***
+ * This is steps class for NavBarAmazonHomePage class. This class contains generic methods of operation
+ * on NavBarAmazonHomePage class. 
+ * @author ashimnanda19
+ *
+ */
 public class NavBarAmazonHomeSteps extends BaseTestScript{
  
 	WebDriver driver = getDriver();
