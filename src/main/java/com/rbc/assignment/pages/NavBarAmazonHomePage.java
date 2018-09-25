@@ -25,32 +25,8 @@ public class NavBarAmazonHomePage extends BaseTestScript {
 	 * 
 	 */
 
-	@FindBy(id = "nav-link-shopall")
+	@FindBy(css = "#nav-link-shopall")
 	@CacheLookup
 	public WebElement btnNavbarShopByDepartment;
-
-	/**
-	 * 
-	 * WebElements of Shop By Department On-hover Dropdown Main Menu
-	 * 
-	 */
-
-	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[8]/span")
-	@CacheLookup
-	public WebElement departmentKindle;
-
-	/**
-	 * 
-	 * WebElements representing options in the menu of Kindle department
-	 * 
-	 */
-
-	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[8]//a[1]/span[1]")
-	@CacheLookup
-	public WebElement linkKindleOptions_Kindle;
-
-	@FindBy(xpath = "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[8]//a[2]/span[1]")
-	@CacheLookup
-	public WebElement linkKindleOptions_KindlePaperWhite;
 
 }
