@@ -46,7 +46,7 @@ public class AddToCartSteps extends BaseTestScript {
 
 	/***
 	 * This method confirms the addition of product in to cart and returns true if
-	 * the products are succesfully added to the cart.
+	 * the products are successfully added to the cart.
 	 * 
 	 * @return
 	 */
