@@ -24,26 +24,29 @@ public class AddToCartPage extends BaseTestScript {
 	 */
 
 	/* Text Fields */
-	@FindBy(id = "confirm-text")
+	@FindBy(css = "#confirm-text")
 	@CacheLookup
-	public WebElement ConfirmationMessage;
+	public WebElement confirmationMessage;
 
 	/* DropDowns */
-	@FindBy(id = "quantity")
+	@FindBy(css = "#quantity")
 	@CacheLookup
 	public WebElement ddQuantity;
 
 	/* Buttons */
-	@FindBy(id = "add-to-cart-button")
+	@FindBy(css = "#add-to-cart-button")
 	@CacheLookup
 	public WebElement btnAddToCart;
 
-	@FindBy(xpath="//*[@class=\"a-popover-wrapper\"]/header/button")
+	@FindBy(css = "#a-popover-7 > div > header > button")
 	@CacheLookup
 	public WebElement btnCloseAddToYourOrderPopUp;
-	
 
-	@FindBy(xpath = "//*[@id=\"hlb-next-steps\"]/a[2]")
+	@FindBy(css = "#intl_pop_addToOrder")
+	@CacheLookup
+	public WebElement btnAddToYourOrderPopUp;
+
+	@FindBy(css = "#hlb-next-steps > a.hucSprite.s_checkout.hlb-checkout-button")
 	@CacheLookup
 	public WebElement btnProceedToCheckout;
 
