@@ -17,11 +17,11 @@ import com.rbc.assignment.utility.framework.Log;
  *
  */
 public class NavBarAmazonHomeSteps extends BaseTestScript{
- 
+	private static NavBarAmazonHomeSteps testObj;
 	WebDriver driver = getDriver();
 	
 	public synchronized static NavBarAmazonHomeSteps get() {
-		NavBarAmazonHomeSteps testObj = new NavBarAmazonHomeSteps();
+		 testObj = new NavBarAmazonHomeSteps();
 		return testObj;
 	}
 	
