@@ -14,11 +14,11 @@ import com.rbc.assignment.utility.framework.Log;
  *
  */
 public class AddToCartSteps extends BaseTestScript {
-
+	private static AddToCartSteps testObj;
 	WebDriver driver = getDriver();
 
 	public synchronized static AddToCartSteps get() {
-		AddToCartSteps testObj = new AddToCartSteps();
+		 testObj = new AddToCartSteps();
 		return testObj;
 	}
 
@@ -37,6 +37,7 @@ public class AddToCartSteps extends BaseTestScript {
 	}
 
 	public void closeAddToYourOrderPopUp() {
+		seWaitForClickableWebElement(driver, AddToCartPage.get().btnAddToYourOrderPopUp, 20);
 		seClickOnElement(AddToCartPage.get().btnCloseAddToYourOrderPopUp, "btnCloseAddToYourOrderPopUp");
 	}
 

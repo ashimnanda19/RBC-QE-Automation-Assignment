@@ -14,11 +14,11 @@ import com.rbc.assignment.utility.framework.Log;
  */
 
 public class SignInSteps extends BaseTestScript {
-
+	private static SignInSteps testObj;
 	WebDriver driver = getDriver();
 
 	public synchronized static SignInSteps get() {
-		SignInSteps testObj = new SignInSteps();
+		 testObj = new SignInSteps();
 		return testObj;
 	}
 
